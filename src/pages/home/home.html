@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
       Ionic Blank
@@ -11,4 +11,22 @@
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
+</ion-content> -->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    
+    <ion-list>
+    
+      <p><img *ngIf='show' src="{{imgUrl}}"></p>
+    </ion-list>
+    <button (click)="pic()" ion-button full >Take photo</button>
+    <button (click)="choosePhoto()" ion-button full >Load photo from gallery</button>
+    <button (click)="transferData()" ion-button full >Save Image</button> 
 </ion-content>

@@ -3,10 +3,14 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
+import {Camera} from '@ionic-native/camera';
+import { MediaCapture } from '@ionic-native/media-capture';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+// import { Media } from '@ionic-native/media';
+// import { File } from '@ionic-native/file';
 @NgModule({
   declarations: [
     MyApp,
@@ -14,6 +18,7 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -23,7 +28,7 @@ import { HomePage } from '../pages/home/home';
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen,Camera,MediaCapture,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
