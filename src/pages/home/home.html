@@ -12,21 +12,20 @@
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
 </ion-content> -->
-
-<ion-header>
-  <ion-navbar>
+<ion-header >
+  <ion-navbar color='primary'>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="masters">
   
     
     <ion-list>
     
       <p><img *ngIf='show' src="{{imgUrl}}"></p>
     </ion-list>
-    <button (click)="pic()" ion-button full >Take photo</button>
-    <button (click)="choosePhoto()" ion-button full >Load photo from gallery</button>
-    <button (click)="transferData()" ion-button full >Save Image</button> 
+    <button (click)="pic()" ion-button full round color='primary'>  <ion-icon name="camera">  </ion-icon>  Capture Image </button>
+    <button (click)="choosePhoto()" ion-button full round color='primary'>  <ion-icon name="ios-images">  </ion-icon>  Image From Gallery</button>
+    <button (click)="transferData()" ion-button full round color='primary'>Store Image</button> 
 </ion-content>
